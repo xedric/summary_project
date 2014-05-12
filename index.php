@@ -1,5 +1,6 @@
 <ul>
-	<li><a href="add_subject.php">Add subject</a></li>
+	<li><a href="add_subject.php">Lägg till ämne</a></li>
+	<li><a href="add_summary.php">Lägg till sammanfattning</a></li>
 
 <?php
 
@@ -25,6 +26,7 @@
 		}
 	}
 
+	// show all posts from subject table
 	foreach($pdo->query("SELECT * FROM subjects ORDER BY name") as $row)
 	{	
 		echo "<li><a href=\"summaries.php?subject_id={$row['id']}\">{$row['name']}</a></li>";
